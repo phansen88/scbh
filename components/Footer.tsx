@@ -20,7 +20,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-lash-pink-500/30 to-lash-pink-100 text-lash-pink-900 pt-12">
+    <footer className="bg-gradient-to-b from-lash-pink-200/60 to-lash-pink-100/70 text-lash-pink-900 pt-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-4">
         {/* Column 1: Logo with address underneath */}
         <div>
