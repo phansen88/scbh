@@ -24,12 +24,12 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
 
   return (
     <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Book tid
+          <h2 className="text-2xl font-bold text-lash-pink-950 dark:text-white mb-4">
+            Find en ledig tid
           </h2>
           <form>
             <div className="mb-6">
-              <label htmlFor="timeslot" className="block text-gray-700 text-sm font-bold mb-2">
+              <label htmlFor="timeslot" className="block text-lash-pink-950 text-sm font-bold mb-2">
                 Vælg et tidspunkt:
               </label>
               <select
@@ -48,7 +48,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
               </select>
             </div>
             <div className="mb-6">
-              <label htmlFor="service" className="block text-gray-700 text-sm font-bold mb-2">
+              <label htmlFor="service" className="block text-lash-pink-950 text-sm font-bold mb-2">
                 Vælg en service:
               </label>
               <select
@@ -69,9 +69,9 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
               data-te-ripple-init
               data-te-ripple-color="light"
               onClick={handleBookNowClick}
-              className="mb-6 inline-block w-full rounded bg-lash-pink-700 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-lash-pink-300 transition duration-150 ease-in-out hover:bg-lash-pink-700 hover:shadow-lash-pink-500 focus:bg-lash-pink-800 focus:shadow-lash-pink-500 focus:outline-none focus:ring-0 active:bg-lash-pink-700 active:shadow-lash-pink-500"
+              className="mb-6 inline-block w-full rounded bg-curry-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-curry-300 transition duration-150 ease-in-out hover:bg-curry-700 hover:shadow-curry-500 focus:bg-curry-800 focus:shadow-curry-500 focus:outline-none focus:ring-0 active:bg-curry-700 active:shadow-curry-500"
             >
-              Book now
+              Book nu
             </button>
           </form>
         </div>

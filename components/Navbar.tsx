@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-md fixed top-0 left-0 right-0 z-50 text-lash-pink-950 hidden lg:block">
+    <nav className="bg-lash-pink-600 shadow-md fixed top-0 left-0 right-0 z-50 text-lash-pink-50 hidden lg:block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -28,10 +28,10 @@ const Navbar = () => {
             <div className="hidden md:block">
               {/* Navigationsmenu for større skærme */}
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="hover:text-pink-500">
+                <a href="/" className="hover:text-curry-400">
                   Forside
                 </a>
-                <a href="/booking" className="hover:text-pink-500">
+                <a href="/booking" className="hover:text-curry-400">
                   Booking
                 </a>
                 {/* Tilføj flere menuelementer her */}
