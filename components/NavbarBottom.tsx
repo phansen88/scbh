@@ -4,9 +4,9 @@
 const NavbarBottom = () => {
 
     return (
-        <section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-lash-pink-300 shadow">
+        <section id="bottom-navigation" className="md:hidden block fixed inset-x-0 bottom-0 z-10 bg-lash-pink-600 shadow">
             <div id="tabs" className="flex justify-between">
-                <a href="/" className="w-full text-lash-pink-800/95 focus:text-lash-pink-500 hover:text-lash-pink-900/90 justify-center inline-block text-center pt-2 pb-1">
+                <a href="/" className="w-full text-lash-pink-50/95 focus:text-lash-pink-200 hover:text-lash-pink-300/90 justify-center inline-block text-center pt-2 pb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mb-1" width={32} height={32} viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
@@ -15,7 +15,7 @@ const NavbarBottom = () => {
                     </svg>
                     <span className="tab tab-home block text-xs">Forside</span>
                 </a>
-                <a href="#" className="w-full text-lash-pink-800/95 focus:text-lash-pink-500 hover:text-lash-pink-900/90 justify-center inline-block text-center pt-2 pb-1">
+                <a href="#" className="w-full text-lash-pink-50/95 focus:text-lash-pink-200 hover:text-lash-pink-300/90 justify-center inline-block text-center pt-2 pb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mb-1" width={32} height={32} viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
@@ -27,7 +27,7 @@ const NavbarBottom = () => {
                     </svg>
                     <span className="tab tab-kategori block text-xs">Book</span>
                 </a>
-                <a href="#" className="w-full text-lash-pink-800/95 focus:text-lash-pink-500 hover:text-lash-pink-900/90 justify-center inline-block text-center pt-2 pb-1">
+                <a href="#" className="w-full text-lash-pink-50/95 focus:text-lash-pink-200 hover:text-lash-pink-300/90 justify-center inline-block text-center pt-2 pb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mb-1" width={32} height={32} viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" />
@@ -35,7 +35,7 @@ const NavbarBottom = () => {
                     </svg>
                     <span className="tab tab-whishlist block text-xs">Shop</span>
                 </a>
-                <a href="#" className="w-full text-lash-pink-800/95 focus:text-lash-pink-500 hover:text-lash-pink-900/90 justify-center inline-block text-center pt-2 pb-1">
+                <a href="#" className="w-full text-lash-pink-50/95 focus:text-lash-pink-200 hover:text-lash-pink-300/90 justify-center inline-block text-center pt-2 pb-1">
                     <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mb-1" width={32} height={32} viewBox="0 0 24 24" strokeWidth={1.25} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />

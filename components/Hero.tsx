@@ -50,8 +50,8 @@ const Hero = () => {
                     zIndex: '10'
                   }}>
               <h1
-                className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-300">
-                Skincare by Hammer<br /><span className="text-lash-pink-500">Får din skønhed til at blomstre</span>
+                className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-500">
+                Skincare by Hammer<br /><span className="text-lash-pink-700">Får din skønhed til at blomstre</span>
               </h1>
               <p className="text-black">
                 Jeg tilbyder ekslusive skøndhedsbehandlinger i Hedehusene inden for hudpleje, hårfjerning, manicure, makeup. Parkering lige ved døren. Ring og book tid på  12 34 56 78 eller book online.
@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
             <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
               <div
-                className="relative block rounded-lg px-6 py-12 bg-gradient-to-b from-lash-pink-300 to-lash-pink-700 md:px-12 lg:col-start-2 lg:w-[310px]">
+                className="relative block rounded-lg px-6 py-12 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[310px]">
                 <AppointmentWidget timeslots={timeslots} />
               </div>
             </div>

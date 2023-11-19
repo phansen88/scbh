@@ -69,7 +69,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
               data-te-ripple-init
               data-te-ripple-color="light"
               onClick={handleBookNowClick}
-              className="mb-6 inline-block w-full rounded bg-lash-pink-300 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-lash-pink-300 transition duration-150 ease-in-out hover:bg-lash-pink-700 hover:shadow-lash-pink-500 focus:bg-lash-pink-800 focus:shadow-lash-pink-500 focus:outline-none focus:ring-0 active:bg-lash-pink-700 active:shadow-lash-pink-500"
+              className="mb-6 inline-block w-full rounded bg-lash-pink-700 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-lash-pink-300 transition duration-150 ease-in-out hover:bg-lash-pink-700 hover:shadow-lash-pink-500 focus:bg-lash-pink-800 focus:shadow-lash-pink-500 focus:outline-none focus:ring-0 active:bg-lash-pink-700 active:shadow-lash-pink-500"
             >
               Book now
             </button>
