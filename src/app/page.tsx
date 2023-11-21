@@ -5,6 +5,7 @@ import NavbarBottom from '@/components/NavbarBottom';
 import ProductCard, { Product } from '@/components/ProductCard';
 import Footer from '@/components/Footer';
 
+
 const products: Product[] = [
   {
     id: 1,
@@ -65,8 +66,10 @@ const products: Product[] = [
 ];
 
 const Home = () => {
+
   return (
-    <div className='bg-white pb-16 md:pb-0'>
+    <div className='bg-white'>
+
       {/* Inkluder Navbar komponenten */}
       <Navbar />
 
@@ -77,7 +80,7 @@ const Home = () => {
       {/*<ProductCard products= />*/}
 
       <Footer />
-      <NavbarBottom />
+      {/* <NavbarBottom /> */}
     </div>
   );
 };

@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
 
-    <div className="relative min-h-[70vh] flex items-center justify-center">
+    <div className="relative min-h-[65vh] flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-25"
         style={{
@@ -58,10 +58,13 @@ const Hero = () => {
               </p>
             </div>
             <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
+              {/*
               <div
                 className="relative block rounded-lg px-6 pt-6 pb-4 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[284px]">
                 <AppointmentWidget timeslots={timeslots} />
+          
               </div>
+              */}
             </div>
           </div>
         </div>
