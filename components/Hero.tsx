@@ -37,9 +37,9 @@ const Hero = () => {
 
     <div className="relative min-h-[80vh] flex items-center justify-center">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center opacity-25"
         style={{
-          backgroundImage: 'url("/images/eyelash.jpg")', // Replace with the path to your background image
+          backgroundImage: 'url("/images/skincare.jpg")', // Replace with the path to your background image
         }}
       ></div>
 
@@ -50,16 +50,16 @@ const Hero = () => {
                     zIndex: '10'
                   }}>
               <h1
-                className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-300">
-                Skincare by Hammer<br /><span className="text-lash-pink-500">Får din skønhed til at blomstre</span>
+                className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-500">
+                Få din <span className="text-lash-pink-700">skønhed</span><br /> til at blomstre
               </h1>
-              <p className="text-black">
+              <p className="text-lash-pink-950">
                 Jeg tilbyder ekslusive skøndhedsbehandlinger i Hedehusene inden for hudpleje, hårfjerning, manicure, makeup. Parkering lige ved døren. Ring og book tid på  12 34 56 78 eller book online.
               </p>
             </div>
             <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
               <div
-                className="relative block rounded-lg px-6 py-12 bg-gradient-to-b from-lash-pink-300 to-lash-pink-700 md:px-12 lg:col-start-2 lg:w-[310px]">
+                className="relative block rounded-lg px-6 pt-6 pb-4 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[310px]">
                 <AppointmentWidget timeslots={timeslots} />
               </div>
             </div>
