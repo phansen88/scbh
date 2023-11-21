@@ -66,7 +66,7 @@ const products: Product[] = [
 
 const Home = () => {
   return (
-    <div className='bg-white mb-16 md:mb-0'>
+    <div className='bg-white pb-16 md:pb-0'>
       {/* Inkluder Navbar komponenten */}
       <Navbar />
 

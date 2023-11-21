@@ -35,7 +35,7 @@ const Hero = () => {
 
   return (
 
-    <div className="relative min-h-[80vh] flex items-center justify-center">
+    <div className="relative min-h-[70vh] flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center opacity-25"
         style={{
@@ -47,8 +47,8 @@ const Hero = () => {
         <div className="w-100 mx-auto text-black sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="mt-12 lg:mt-0" style={{
-                    zIndex: '10'
-                  }}>
+              zIndex: '10'
+            }}>
               <h1
                 className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-500">
                 Få din <span className="text-lash-pink-700">skønhed</span><br /> til at blomstre
@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
             <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
               <div
-                className="relative block rounded-lg px-6 pt-6 pb-4 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[310px]">
+                className="relative block rounded-lg px-6 pt-6 pb-4 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[284px]">
                 <AppointmentWidget timeslots={timeslots} />
               </div>
             </div>
