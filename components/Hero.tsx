@@ -49,39 +49,66 @@ const Hero = () => {
               <div className="grid items-center gap-12 lg:grid-cols-2">
               <div className="flex items-center justify-center w-full h-96">
                 <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://images.unsplash.com/photo-1589647053904-d488119f37a8?q=80&w=650&h=520&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="glasses photo" />
-
-    <div className="relative min-h-[65vh] flex items-center justify-center">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-25"
-        style={{
-          backgroundImage: 'url("/images/skincare.jpg")', // Replace with the path to your background image
-        }}
-      ></div>
-
-      <div className="px-6 py-12 text-center md:px-12 lg:py-24 lg:text-left">
-        <div className="w-100 mx-auto text-black sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="mt-12 lg:mt-0" style={{
-              zIndex: '10'
-            }}>
-              <h1
-                className="mt-0 mb-12 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl text-lash-pink-500">
-                Få din <span className="text-lash-pink-700">skønhed</span><br /> til at blomstre
-              </h1>
-              <p className="text-lash-pink-950">
-                Jeg tilbyder ekslusive skøndhedsbehandlinger i Hedehusene inden for hudpleje, hårfjerning, manicure, makeup. Parkering lige ved døren. Ring og book tid på  12 34 56 78 eller book online.
-              </p>
             </div>
-            <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
-              <div
-                className="relative block rounded-lg px-6 pt-6 pb-4 bg-gradient-to-b from-lash-pink-300/80 to-lash-pink-400/90 md:px-12 lg:col-start-2 lg:w-[310px]">
-                <AppointmentWidget timeslots={timeslots} />
+
+               
+                <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
+                  <div
+                    className="relative block rounded-lg px-6 pt-6 pb-4 md:px-12 lg:col-start-2">
+                    <AppointmentWidget timeslots={timeslots} />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+        <div className="max-w-screen-xl mx-auto p-24 sm:p-10 md:p-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 md:gap-10">
+        <div className="rounded overflow-hidden shadow-lg">
+            <div className="relative">
+                <a href="#">
+                    <img className="w-full"
+                        src="https://images.pexels.com/photos/5177995/pexels-photo-5177995.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                        alt="Brow mapping" />
+                    <div
+                        className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                    </div>
+                </a>
+            </div>
+            <div className="px-6 py-4 text-center sm:text-left">
+
+                <a href="#"
+                    className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Brow mapping</a>
+                <p className="text-gray-500 text-sm">
+                    Mapping af dine bryn så du får den helt perfekte form til din ansigtsform
+                </p>
+            </div>
+        </div>
+        <div className="rounded overflow-hidden shadow-lg">
+
+            <div className="relative">
+                <a href="#">
+                    <img className="w-full"
+                        src="https://images.pexels.com/photos/7446922/pexels-photo-7446922.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                        alt="Eyelash lift" />
+                    <div
+                        className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
+                    </div>
+                </a>
+            </div>
+            <div className="px-6 py-4 text-center sm:text-left">
+
+                <a href="#"
+                    className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Lash lift</a>
+                <p className="text-gray-500 text-sm">
+                Permanent buk af egne vipper.
+                </p>
+            </div>
+        </div>
     </div>
+</div>
+    </>
   );
 };
 
