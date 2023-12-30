@@ -37,7 +37,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
                 name="timeslot"
                 value={selectedTimeslot}
                 onChange={handleTimeslotChange}
-                className="block w-full rounded border-gray-300 py-2 px-3 leading-5 focus:ring focus:ring-opacity-50 focus:border-primary transition duration-150 ease-in-out"
+                className="block w-full rounded bg-white border-lash-pink-300 border-solid border-2 py-2 px-3 leading-5 focus:ring focus:ring-opacity-50 focus:border-primary transition duration-150 ease-in-out"
               >
                 <option value="" disabled>Vælg tid</option>
                 {timeslots.map((timeslot, index) => (
@@ -56,7 +56,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
                 name="service"
                 value={selectedService}
                 onChange={handleServiceChange}
-                className="block w-full rounded border-gray-300 py-2 px-3 leading-5 focus:ring focus:ring-opacity-50 focus:border-primary transition duration-150 ease-in-out"
+                className="block w-full rounded bg-white border-lash-pink-300 border-solid border-2 py-2 px-3 leading-5 focus:ring focus:ring-opacity-50 focus:border-primary transition duration-150 ease-in-out"
               >
                 <option value="" disabled>Vælg service</option>
                 <option value="lashLift">Eye Lash Lift</option>
@@ -69,7 +69,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
               data-te-ripple-init
               data-te-ripple-color="light"
               onClick={handleBookNowClick}
-              className="mb-6 inline-block w-full rounded bg-curry-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-curry-300 transition duration-150 ease-in-out hover:bg-curry-700 hover:shadow-curry-500 focus:bg-curry-800 focus:shadow-curry-500 focus:outline-none focus:ring-0 active:bg-curry-700 active:shadow-curry-500"
+              className="mb-6 inline-block w-full rounded bg-curry-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-curry-300 transition duration-150 ease-in-out hover:bg-curry-700 hover:shadow-curry-500 focus:bg-curry-800 focus:shadow-curry-500 focus:outline-none focus:ring-0 active:bg-curry-700 active:shadow-curry-500 lg:w-[310px]"
             >
               Book nu
             </button>

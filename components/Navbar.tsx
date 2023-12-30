@@ -1,6 +1,8 @@
 // components/Navbar.tsx
 'use client'
 import { useState } from 'react';
+import { HiOutlineUserCircle, HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import '@/app/menu.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,32 +12,31 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-lash-pink-600 shadow-md fixed top-0 left-0 right-0 z-50 text-lash-pink-50 hidden lg:block">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              {/* Logo eller brand */}
-              <a href="/">
-                {/*
-                <img
-                  className="h-8 w-8"
-                  src="/images/logo.png"
-                  alt="Salon Logo"
-  />*/}Logo
-              </a>
-            </div>
-            <div className="hidden md:block">
+    <nav className="bg-shade-950 shadow fixed top-0 left-0 right-0 z-50 text-lash-pink-400 hidden lg:block">
+      <div className="px-4 py-2 sm:px-6 lg:px-8">
+        <div className="">
+          <div className="">
               {/* Navigationsmenu for større skærme */}
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="hover:text-curry-400">
+              <div className='menu'>
+                <a href="/">
+                <HiOutlineMagnifyingGlass className="h-5 w-5 hover:scale-[1.2]" />
+                </a>
+                <a href="/" className="hover:text-lash-pink-950">
                   Forside
                 </a>
-                <a href="/booking" className="hover:text-curry-400">
+                <a href="/booking" className="hover:text-lash-pink-950">
                   Booking
                 </a>
+                <a href="/booking" className="hover:text-lash-pink-950">
+                  Om
+                </a>
+                <a href="/booking" className="hover:text-lash-pink-950">
+                  Kontakt
+                </a>
+                <a href="/booking">
+                  <HiOutlineUserCircle className="h-6 w-6 hover:scale-[1.2]" />
+                </a>
                 {/* Tilføj flere menuelementer her */}
-              </div>
             </div>
           </div>
           {/* Hamburger-ikon for mindre skærme */}

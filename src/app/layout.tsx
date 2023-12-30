@@ -1,8 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Source_Sans_3 } from 'next/font/google'
-
-const sourceSans = Source_Sans_3({ subsets: ['latin'] })
+import { PT_Sans } from 'next/font/google';
+import { Handlee } from 'next/font/google';
+const handleeSans = Handlee({ subsets: ['latin'], weight: "400" })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   // Tilføj flere klasser ved at kombinere dem som en streng med mellemrum
-  const bodyClasses = `${sourceSans.className} bg-white`;
+  const bodyClasses = `${handleeSans.className} bg-white`;
   return (
     <html lang="en">
       <body className={bodyClasses}>{children}</body>
