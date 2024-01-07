@@ -109,7 +109,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <NavbarBottom />
     </>
   );
 };

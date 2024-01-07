@@ -1,8 +1,6 @@
 // components/Navbar.tsx
 'use client'
 import { useState } from 'react';
-import { HiOutlineUserCircle, HiOutlineMagnifyingGlass } from "react-icons/hi2";
-import '@/app/menu.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,90 +10,69 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-shade-950 shadow fixed top-0 left-0 right-0 z-50 text-lash-pink-400 hidden lg:block">
-      <div className="px-4 py-2 sm:px-6 lg:px-8">
-        <div className="">
-          <div className="">
-              {/* Navigationsmenu for større skærme */}
-              <div className='menu'>
-                <a href="/">
-                <HiOutlineMagnifyingGlass className="h-5 w-5 hover:scale-[1.2]" />
-                </a>
-                <a href="/" className="hover:text-lash-pink-950">
-                  Forside
-                </a>
-                <a href="/booking" className="hover:text-lash-pink-950">
-                  Booking
-                </a>
-                <a href="/booking" className="hover:text-lash-pink-950">
-                  Om
-                </a>
-                <a href="/booking" className="hover:text-lash-pink-950">
-                  Kontakt
-                </a>
-                <a href="/booking">
-                  <HiOutlineUserCircle className="h-6 w-6 hover:scale-[1.2]" />
-                </a>
-                {/* Tilføj flere menuelementer her */}
+    <>
+      {/* Desktop menu */}
+      <nav className="relative justify-between md:justify-normal bg-lash-pink-600 text-lash-pink-50 shadow-md">
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
+          <div className='flex items-center justify-between md:justify-normal h-16'>
+            <div className='flex-shrink-0'>
+              {/* Logo eller brand */}
+              <a className="text-3xl font-bold leading-none" href="#">
+                Logo
+              </a>
             </div>
+            {/* Hamburger-ikon for mindre skærme */}
+            <div className="block md:hidden">
+              <button className="navbar-burger inline-flex items-center text-white p-3" onClick={toggleMenu} aria-expanded="false">
+                <svg className="h-6 w-6 block fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+            <ul className="hidden md:flex md:items-baseline md:w-auto md:space-x-4 ml-10">
+              <li><a className="text-sm text-curry-600 font-bold" href="#">Forside</a></li>
+              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Book tid</a></li>
+              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Behandlinger</a></li>
+              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Din konto</a></li>
+            </ul>
           </div>
-          {/* Hamburger-ikon for mindre skærme */}
-          <div className="-mr-2 flex md:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="bg-white p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Åbn menu</span>
-              <span>Menu</span>
-              {/* Hamburger-ikon */}
-              <svg
-                className={`h-6 w-6 ${isMenuOpen ? 'hidden' : 'block'}`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-              {/* Luk-ikon */}
-              <svg
-                className={`h-6 w-6 ${isMenuOpen ? 'block' : 'hidden'}`}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+        </div>
+      </nav>
+      {/* Mobile menu */}
+      <div className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden navbar-menu transition-all ease-in-out delay-150  ${isMenuOpen ? 'w-5/6' : 'w-0'}`}>
+        <div className={`navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
+        <nav className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}>
+          <div className="flex items-center mb-8">
+            <a className="mr-auto text-3xl font-bold leading-none text-lash-pink-950" href="#">
+              Logo
+            </a>
+            <button className="navbar-close" onClick={toggleMenu}>
+              <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
               </svg>
             </button>
           </div>
-        </div>
+          <div>
+            <ul>
+              <li className="mb-1">
+                <a className="block p-4 font-semibold text-curry-900 bg-curry-200 rounded" href="#">Forside</a>
+              </li>
+              <li className="mb-1">
+                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Behandlinger</a>
+              </li>
+              <li className="mb-1">
+                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Din konto</a>
+              </li>
+            </ul>
+          </div>
+          <div className="mt-auto">
+            <div className="pt-6">
+              <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-curry-500 hover:bg-curry-700  rounded-xl" href="#">Book tid</a>
+            </div>
+          </div>
+        </nav>
       </div>
-      {/* Responsivt dropdown-menu */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="/" className="block hover:bg-gray-50">
-            Forside
-          </a>
-          <a href="/booking" className="block hover:bg-gray-50">
-            Booking
-          </a>
-          {/* Tilføj flere menuelementer her */}
-        </div>
-      </div>
-    </nav>
+    </>
   );
 };
 
