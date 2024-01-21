@@ -1,9 +1,13 @@
 // components/Navbar.tsx
 'use client'
 import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,9 +21,9 @@ const Navbar = () => {
           <div className='flex items-center justify-between md:justify-normal h-16'>
             <div className='flex-shrink-0'>
               {/* Logo eller brand */}
-              <a className="text-3xl font-bold leading-none" href="#">
+              <Link className="text-3xl font-bold leading-none" href="/">
                 Logo
-              </a>
+              </Link>
             </div>
             {/* Hamburger-ikon for mindre skærme */}
             <div className="block md:hidden">
@@ -30,10 +34,22 @@ const Navbar = () => {
               </button>
             </div>
             <ul className="hidden md:flex md:items-baseline md:w-auto md:space-x-4 ml-10">
-              <li><a className="text-sm text-curry-600 font-bold" href="#">Forside</a></li>
+              <li><Link className={clsx(
+                'text-sm',
+                {
+                  'text-curry-600 font-bold': pathname === '/',
+                  'text-lash-pink-900 hover:text-gray-500': pathname !== '/',
+                },
+              )} href="/">Forside</Link></li>
               <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Book tid</a></li>
-              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Behandlinger</a></li>
-              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Din konto</a></li>
+              <li><Link className={clsx(
+                'text-sm',
+                {
+                  'text-curry-600 font-bold': pathname === '/behandlinger',
+                  'text-lash-pink-900 hover:text-gray-500': pathname !== '/behandlinger',
+                },
+              )} href="/behandlinger">Behandlinger</Link></li>
+              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Om mig</a></li>
             </ul>
           </div>
         </div>
@@ -43,9 +59,9 @@ const Navbar = () => {
         <div className={`navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
         <nav className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}>
           <div className="flex items-center mb-8">
-            <a className="mr-auto text-3xl font-bold leading-none text-lash-pink-950" href="#">
+            <Link className="mr-auto text-3xl font-bold leading-none text-lash-pink-950" href="/">
               Logo
-            </a>
+            </Link>
             <button className="navbar-close" onClick={toggleMenu}>
               <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -55,13 +71,13 @@ const Navbar = () => {
           <div>
             <ul>
               <li className="mb-1">
-                <a className="block p-4 font-semibold text-curry-900 bg-curry-200 rounded" href="#">Forside</a>
+                <Link className="block p-4 font-semibold text-curry-900 bg-curry-200 rounded" href="/">Forside</Link>
               </li>
               <li className="mb-1">
-                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Behandlinger</a>
+                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="/behandlinger">Behandlinger</Link>
               </li>
               <li className="mb-1">
-                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Din konto</a>
+                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Om mig</a>
               </li>
             </ul>
           </div>

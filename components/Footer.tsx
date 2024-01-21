@@ -126,8 +126,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="col-start-1 pb- row-start-5 px-6 md:px-0 md:mx-auto mb-12">
-          <div className="w-full mt-8 bg-lash-pink-100 border rounded-md lg:max-w-sm dark:border-gray-700 focus-within:border-curry-400 focus-within:ring focus-within:ring-curry-300 dark:focus-within:border-curry-400 focus-within:ring-opacity-40">
+        <div className="col-start-1 pb-2 row-start-5 px-6 md:px-0 md:mx-auto mb-12">
+          <div className="w-full mt-8 bg-lash-pink-100 border rounded-md lg:max-w-md dark:border-gray-700 focus-within:border-curry-400 focus-within:ring focus-within:ring-curry-300 dark:focus-within:border-curry-400 focus-within:ring-opacity-40">
             <form className="flex flex-col lg:flex-row">
               <input type="email" placeholder="Skriv din email adresse" className="flex-1 h-10 px-4 py-2 m-1 text-gray-700 placeholder-gray-400 bg-transparent border-none appearance-none dark:text-gray-200 focus:outline-none focus:placeholder-transparent focus:ring-0" />
 

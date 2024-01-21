@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
 import NavbarBottom from '@/components/NavbarBottom';
 import ProductCard, { Product } from '@/components/ProductCard';
-import Footer from '@/components/Footer';
 
 
 const products: Product[] = [
@@ -68,10 +66,8 @@ const products: Product[] = [
 const Home = () => {
 
   return (
-    <div className='bg-white'>
-
+    <>
       {/* Inkluder Navbar komponenten */}
-      <Navbar />
 
       {/* Inkluder Hero komponenten */}
       <Hero />
@@ -79,9 +75,8 @@ const Home = () => {
       {/* Inkluder ProductCard komponenten */}
       {/*<ProductCard products= />*/}
 
-      <Footer />
       {/* <NavbarBottom /> */}
-    </div>
+    </>
   );
 };
 
