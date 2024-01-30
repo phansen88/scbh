@@ -37,16 +37,16 @@ const Hero = () => {
 
   return (
     <>
-      <div className="pt-6 md:pt-24 pb-4 text-gray-950  bg-lash-pink-100 text-center grid">
+      <div className="pt-6 md:pt-24 pb-4 text-gray-950  bg-lash-pink-400/5 text-center grid">
         <div className="col-start-1 row-start-1 w-full h-full"></div>
         <div className="col-start-1 row-start-1 mx-auto my-auto">
           <h1 className="font-bold text-4xl text-lash-pink-500">Få din <span className="text-lash-pink-700">skønhed</span> til at blomstre</h1>
         </div>
       </div>
 
-      <div className="relative flex items-center justify-center bg-lash-pink-100">
+      <div className="relative flex items-center justify-center bg-lash-pink-400/5">
 
-        <div className="px-6 py-4 text-center md:px-12 lg:py-8 lg:text-left">
+        <div className="px-5 py-4 text-center md:px-12 lg:py-16 lg:text-left">
           <div className="mx-auto text-black sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-[120rem]">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div className="flex items-center justify-center w-full h-96">
@@ -65,9 +65,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="max-w-screen-xl mx-auto py-24 px-6 sm:p-10 md:p-16">
+      <div className="max-w-screen-xl mx-auto py-16 px-5 sm:p-10 md:p-16 bg-slate-500/10 md:bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-24 md:gap-10">
-          <div className="rounded overflow-hidden shadow-lg">
+          <div className="rounded-lg overflow-hidden shadow-lg bg-lash-pink-50">
             <div className="relative">
               <a href="#">
                 <Image className="w-full"
@@ -81,16 +81,16 @@ const Hero = () => {
                 </div>
               </a>
             </div>
-            <div className="px-6 py-4 text-center sm:text-left">
+            <div className="px-5 py-4 text-center sm:text-left">
 
               <a href="#"
-                className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Brow mapping</a>
-              <p className="text-gray-500 text-sm">
+                className="font-semibold text-lg inline-block text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Brow mapping</a>
+              <p className="text-shade-950/70 text-sm">
                 Mapping af dine bryn så du får den helt perfekte form til din ansigtsform
               </p>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg">
+          <div className="rounded-lg overflow-hidden shadow-lg bg-lash-pink-50">
 
             <div className="relative">
               <a href="#">
@@ -108,8 +108,8 @@ const Hero = () => {
             <div className="px-6 py-4 text-center sm:text-left">
 
               <a href="#"
-                className="font-semibold text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out">Lash lift</a>
-              <p className="text-gray-500 text-sm">
+                className="font-semibold text-lg inline-block text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Lash lift</a>
+              <p className="text-shade-950/70 text-sm">
                 Permanent buk af egne vipper.
               </p>
             </div>

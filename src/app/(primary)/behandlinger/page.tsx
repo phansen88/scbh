@@ -65,7 +65,7 @@ export default function Behandlinger() {
 
 
   return (
-    <div className="container max-w-xl pt-6 md:pt-24 pb-12 mx-auto space-y-24 px-8 lg:max-w-5xl lg:min-h-[992px]">
+    <div className="container max-w-xl pt-6 md:pt-24 pb-12 mx-auto space-y-24 px-5 lg:max-w-5xl lg:min-h-[992px]">
       <div className="grid lg:gap-24 lg:grid-cols-2">
         <div>
           <h1 className="text-2xl font-bold tracking-tight sm:text-5xl text-lash-pink-600 max-w-[490px]">Skønne behandlinger til dig</h1>
@@ -79,9 +79,9 @@ export default function Behandlinger() {
             {services.map((service, index) => (
               <div className="flex" key={index}>
 
-                <div className="flex items-center justify-between flex-1 mt-1 mb-1">
-                  <h5 className="text-sm font-medium leading-6 text-gray-800">{service.title}</h5>
-                  <p className="ml-6 text-gray-600">{service.price},-</p>
+                <div className="flex items-baseline justify-between flex-1 mt-1 mb-1.5">
+                  <h5 className="text-md font-medium leading-6 text-gray-800">{service.title}</h5>
+                  <p className="ml-10 text-gray-600">{service.price},-</p>
                 </div>
 
               </div>
@@ -94,9 +94,9 @@ export default function Behandlinger() {
             {additionalServices.map((service, index) => (
               <div className="flex" key={index}>
 
-                <div className="flex items-center justify-between flex-1 mt-1 mb-1">
-                  <h5 className="text-sm font-medium leading-6 text-gray-800">{service.title}</h5>
-                  <p className="ml-6 text-gray-600">{service.price},-</p>
+                <div className="flex items-baseline justify-between flex-1 mt-1 mb-1.5">
+                  <h5 className="text-md font-medium leading-6 text-gray-800">{service.title}</h5>
+                  <p className="ml-10 text-gray-600">{service.price},-</p>
                 </div>
 
               </div>

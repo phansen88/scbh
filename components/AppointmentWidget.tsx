@@ -24,7 +24,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
 
   return (
     <div className="text-center">
-          <h2 className="text-2xl font-bold text-lash-pink-950 dark:text-white mb-4">
+          <h2 className="text-2xl font-bold text-lash-pink-950 mb-4">
             Hvad tilbyder jeg
           </h2>
           { /*

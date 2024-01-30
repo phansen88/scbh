@@ -17,13 +17,13 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop menu */}
-      <nav className="relative justify-between md:justify-normal bg-lash-pink-600 md:bg-lash-pink-50 text-lash-pink-50 shadow-md">
+      <nav className="relative justify-between md:justify-normal bg-lash-pink-500 md:bg-lash-pink-50 text-lash-pink-50 shadow-md">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
-          <div className='flex items-center justify-between md:justify-between h-16'>
+          <div className='flex items-center justify-end md:justify-between h-16'>
 
             {/* Hamburger-ikon for mindre skærme */}
-            <div className="block md:hidden">
-              <button className="navbar-burger inline-flex items-center text-white p-3" onClick={toggleMenu} aria-expanded="false">
+            <div className="flex md:hidden">
+              <button className="flex items-center text-white p-3" onClick={toggleMenu} aria-expanded="false">
                 <svg className="h-6 w-6 block fill-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
                 </svg>
@@ -66,9 +66,6 @@ const Navbar = () => {
         <div className={`navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
         <nav className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}>
           <div className="flex items-center mb-8">
-            <Link className="mr-auto text-3xl font-bold leading-none text-lash-pink-950" href="/">
-              Logo
-            </Link>
             <button className="navbar-close" onClick={toggleMenu}>
               <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -78,19 +75,37 @@ const Navbar = () => {
           <div>
             <ul>
               <li className="mb-1">
-                <Link className="block p-4 font-semibold text-curry-900 bg-curry-200 rounded" href="/">Forside</Link>
+                <Link className={clsx(
+                  'block p-4 font-semibold rounded-lg',
+                  {
+                    'text-curry-900 bg-curry-200': pathname === '/',
+                    'text-gray-400 hover:bg-curry-400 hover:text-curry-950': pathname !== '/',
+                  },
+                )}
+                  href="/"
+                  onClick={toggleMenu}>Forside</Link>
               </li>
               <li className="mb-1">
-                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded" href="/behandlinger">Behandlinger</Link>
+                <Link className={clsx(
+                  'block p-4 font-semibold rounded-lg',
+                  {
+                    'text-curry-900 bg-curry-200': pathname === '/behandlinger',
+                    'text-gray-400 hover:bg-curry-400 hover:text-curry-950': pathname !== '/behandlinger',
+                  },
+                )}
+                  href="/behandlinger"
+                  onClick={toggleMenu}>Behandlinger</Link>
               </li>
               <li className="mb-1">
-              <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded" href="/om">Om mig</Link>
+                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded"
+                  href="/om"
+                  onClick={toggleMenu}>Om mig</Link>
               </li>
             </ul>
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-curry-600 hover:bg-curry-800 rounded-xl" href="#">Book tid</a>
+              <a className="block px-4 py-3 mb-2 leading-loose text-sm text-center text-white font-semibold bg-curry-600 hover:bg-curry-800 rounded-xl" href="#">Book tid</a>
             </div>
           </div>
         </nav>
