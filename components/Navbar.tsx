@@ -2,12 +2,13 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,15 +17,10 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop menu */}
-      <nav className="relative justify-between md:justify-normal bg-lash-pink-600 text-lash-pink-50 shadow-md">
+      <nav className="relative justify-between md:justify-normal bg-lash-pink-600 md:bg-lash-pink-50 text-lash-pink-50 shadow-md">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
-          <div className='flex items-center justify-between md:justify-normal h-16'>
-            <div className='flex-shrink-0'>
-              {/* Logo eller brand */}
-              <Link className="text-3xl font-bold leading-none" href="/">
-                Logo
-              </Link>
-            </div>
+          <div className='flex items-center justify-between md:justify-between h-16'>
+
             {/* Hamburger-ikon for mindre skærme */}
             <div className="block md:hidden">
               <button className="navbar-burger inline-flex items-center text-white p-3" onClick={toggleMenu} aria-expanded="false">
@@ -33,24 +29,35 @@ const Navbar = () => {
                 </svg>
               </button>
             </div>
+
             <ul className="hidden md:flex md:items-baseline md:w-auto md:space-x-4 ml-10">
               <li><Link className={clsx(
                 'text-sm',
                 {
-                  'text-curry-600 font-bold': pathname === '/',
-                  'text-lash-pink-900 hover:text-gray-500': pathname !== '/',
+                  'text-lash-pink-700 font-bold': pathname === '/',
+                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/',
                 },
               )} href="/">Forside</Link></li>
-              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Book tid</a></li>
               <li><Link className={clsx(
                 'text-sm',
                 {
-                  'text-curry-600 font-bold': pathname === '/behandlinger',
-                  'text-lash-pink-900 hover:text-gray-500': pathname !== '/behandlinger',
+                  'text-lash-pink-700 font-bold': pathname === '/behandlinger',
+                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/behandlinger',
                 },
               )} href="/behandlinger">Behandlinger</Link></li>
-              <li><a className="text-sm text-lash-pink-900 hover:text-gray-500" href="#">Om mig</a></li>
+              <li><Link className={clsx(
+                'text-sm',
+                {
+                  'text-lash-pink-700 font-bold': pathname === '/om',
+                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/om',
+                },
+              )} href="/om">Om mig</Link></li>
             </ul>
+            <div className='hidden md:flex align-middle'>
+              <button type="button"
+                className="text-white bg-curry-700 hover:bg-curry-800 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-curry-600 dark:hover:bg-curry-700"
+                onClick={() => router.push('/api/auth/signup')}>Book tid</button>
+            </div>
           </div>
         </div>
       </nav>
@@ -74,16 +81,16 @@ const Navbar = () => {
                 <Link className="block p-4 font-semibold text-curry-900 bg-curry-200 rounded" href="/">Forside</Link>
               </li>
               <li className="mb-1">
-                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="/behandlinger">Behandlinger</Link>
+                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded" href="/behandlinger">Behandlinger</Link>
               </li>
               <li className="mb-1">
-                <a className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-900 rounded" href="#">Om mig</a>
+              <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded" href="/om">Om mig</Link>
               </li>
             </ul>
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-curry-500 hover:bg-curry-700  rounded-xl" href="#">Book tid</a>
+              <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-curry-600 hover:bg-curry-800 rounded-xl" href="#">Book tid</a>
             </div>
           </div>
         </nav>

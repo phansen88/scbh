@@ -25,7 +25,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
   return (
     <div className="text-center">
           <h2 className="text-2xl font-bold text-lash-pink-950 dark:text-white mb-4">
-            Find en ledig tid
+            Hvad tilbyder jeg
           </h2>
           { /*
           <form>
@@ -77,15 +77,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
             </button>
           </form>
                 */ }
-                <button
-              type="button"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-              onClick={handleBookNowClick}
-              className="mb-6 inline-block w-full rounded bg-curry-500 px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-curry-300 transition duration-150 ease-in-out hover:bg-curry-600 hover:shadow-curry-500 focus:bg-curry-800 focus:shadow-curry-500 focus:outline-none focus:ring-0 active:bg-curry-700 active:shadow-curry-500"
-            >
-              Book nu
-            </button>
+                <p>En masse tekst her...</p>
         </div>
 
   );

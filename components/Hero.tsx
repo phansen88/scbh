@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import AppointmentWidget from './AppointmentWidget';
 import NavbarBottom from './NavbarBottom';
+import Image from 'next/image';
 
 const timeslots = [
   '09:00 - 10:00',
@@ -36,7 +37,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="pt-6 md:pt-24 pb-4 text-gray-950 bg-lash-pink-100 text-center grid">
+      <div className="pt-6 md:pt-24 pb-4 text-gray-950  bg-lash-pink-100 text-center grid">
         <div className="col-start-1 row-start-1 w-full h-full"></div>
         <div className="col-start-1 row-start-1 mx-auto my-auto">
           <h1 className="font-bold text-4xl text-lash-pink-500">Få din <span className="text-lash-pink-700">skønhed</span> til at blomstre</h1>
@@ -69,8 +70,11 @@ const Hero = () => {
           <div className="rounded overflow-hidden shadow-lg">
             <div className="relative">
               <a href="#">
-                <img className="w-full"
-                  src="https://images.pexels.com/photos/5177995/pexels-photo-5177995.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                <Image className="w-full"
+                  src="/images/lash-lift-model.jpg"
+                  quality={80}
+                  width={500}
+                  height={333}
                   alt="Brow mapping" />
                 <div
                   className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
@@ -90,9 +94,12 @@ const Hero = () => {
 
             <div className="relative">
               <a href="#">
-                <img className="w-full"
-                  src="https://images.pexels.com/photos/7446922/pexels-photo-7446922.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                  alt="Eyelash lift" />
+              <Image className="w-full"
+                  src="/images/lash-lift-model.jpg"
+                  quality={90}
+                  width={500}
+                  height={333}
+                  alt="Lash lift på model" />
                 <div
                   className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
                 </div>
