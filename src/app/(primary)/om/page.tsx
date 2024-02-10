@@ -9,11 +9,11 @@ export default function Om() {
         <div className="h-32 w-32">
 
           <Image className="rounded-full object-cover h-full w-full shadow-md"
-            src="/images/sara.jpeg"
+            src="/images/sara.jpg"
             quality={90}
             width={500}
             height={400}
-            alt="Brow mapping" />
+            alt="Sara" />
         </div>
       </div>
       <div className="grid lg:gap-24 lg:grid-cols-2">
@@ -39,7 +39,7 @@ export default function Om() {
             quality={90}
             width={500}
             height={400}
-            alt="Brow mapping" />
+            alt="Sara" />
         </div>
       </div>
     </div>
