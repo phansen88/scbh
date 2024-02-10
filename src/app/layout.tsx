@@ -1,12 +1,17 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { PT_Sans } from 'next/font/google';
-import { Handlee } from 'next/font/google';
-const ptSans = PT_Sans({ subsets: ['latin'], weight: "400" })
+import { Playfair_Display } from 'next/font/google';
+import { Assistant } from 'next/font/google';
+const playfairSans = Playfair_Display({ subsets: ['latin'], weight: "400", variable: '--font-playfair'});
+const assistantSans = Assistant({ subsets: ['latin'], weight: "400", variable: '--font-assistant'});
+
 
 export const metadata: Metadata = {
   title: 'Skincare by Hammer',
   description: 'Ekslusive skøndhedsbehandlinger i Hedehusene',
+  icons: {
+    icon: '/images/logo.svg'
+  }
 }
 
 export default function RootLayout({
@@ -14,8 +19,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // Tilføj flere klasser ved at kombinere dem som en streng med mellemrum
-  const bodyClasses = `${ptSans.className} bg-white`;
+  const bodyClasses = `${playfairSans.variable} ${assistantSans.variable} bg-white`;
   return (
     <html lang="en">
       <body className={bodyClasses}>{children}</body>

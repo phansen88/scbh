@@ -37,36 +37,45 @@ const Hero = () => {
 
   return (
     <>
-      <div className="pt-6 md:pt-24 pb-4 text-gray-950  bg-lash-pink-400/5 text-center grid">
-        <div className="col-start-1 row-start-1 w-full h-full"></div>
-        <div className="col-start-1 row-start-1 mx-auto my-auto">
-          <h1 className="font-bold text-4xl text-lash-pink-500">Få din <span className="text-lash-pink-700">skønhed</span> til at blomstre</h1>
-        </div>
-      </div>
 
-      <div className="relative flex items-center justify-center bg-lash-pink-400/5">
+      <div className="relative flex items-center justify-center bg-white">
 
         <div className="px-5 py-4 text-center md:px-12 lg:py-16 lg:text-left">
-          <div className="mx-auto text-black sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-[120rem]">
+          <div className="mx-auto text-black sm:max-w-2xl md:max-w-3xl lg:max-w-5xl xl:max-w-76rem]">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <div className="flex items-center justify-center w-full h-96">
-                <img className="object-cover w-full h-full mx-auto rounded-md lg:max-w-2xl" src="https://images.unsplash.com/photo-1589647053904-d488119f37a8?q=80&w=650&h=520&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="glasses photo" />
-              </div>
 
-
-              <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
-                <div
-                  className="relative block rounded-lg px-0 pt-6 pb-4 md:px-12 lg:col-start-2">
-                  <AppointmentWidget timeslots={timeslots} />
+              <div className='col-span-1'>
+                <div className='flex flex-row flex-wrap justify-center'>
+                  <Image className='object-cover w-full h-full mx-auto rounded-md lg:max-w-sm lg:mx-0 mt-6 md:mt-0' width={100} height={100} quality={90} src='/images/logo.svg' alt='Skincare by Hammer logo' />
+                  <h1 className="font-playfair text-2xl md:text-5xl text-lash-pink-400 mt-2 md:mt-8">Få din <span className="text-lash-pink-800">skønhed</span> til at blomstre</h1>
                 </div>
               </div>
+
+              <div className="col-span-1 -mt-6 sm:-mt-0 mb-6 md:mb-24 relative flex sm-hidden">
+                <div className="absolute inset-8 sm:inset-0 flex justify-center items-center">
+                  <div className="w-[80rem] border-b border-lash-pink-500"></div>
+                </div>
+              </div>
+
+              <div className='col-span-1'>
+
+
+                <div className="relative mb-12 lg:mb-0 lg:flex lg:flex-col lg:justify-self-end">
+                  <div
+                    className="relative block rounded-lg px-0 pt-6 pb-4 md:px-12 lg:col-start-2">
+                    <AppointmentWidget timeslots={timeslots} />
+                  </div>
+                </div>
+              </div>
+
+
             </div>
           </div>
         </div>
       </div>
 
       <div className="max-w-screen-xl mx-auto py-16 px-5 sm:p-10 md:p-16 bg-slate-500/10 md:bg-white">
-        <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-24 md:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 gap-16 md:gap-10">
           <div className="rounded-lg overflow-hidden shadow-lg bg-lash-pink-50">
             <div className="relative">
               <a href="#">
@@ -76,16 +85,13 @@ const Hero = () => {
                   width={500}
                   height={333}
                   alt="Brow mapping" />
-                <div
-                  className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
-                </div>
               </a>
             </div>
             <div className="px-5 py-4 text-center sm:text-left">
 
               <a href="#"
-                className="font-semibold text-lg inline-block text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Brow mapping</a>
-              <p className="text-shade-950/70 text-sm">
+                className="font-semibold text-lg inline-block font-playfair text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Brow mapping</a>
+              <p className="text-shade-950/70 text-md">
                 Mapping af dine bryn så du får den helt perfekte form til din ansigtsform
               </p>
             </div>
@@ -94,22 +100,19 @@ const Hero = () => {
 
             <div className="relative">
               <a href="#">
-              <Image className="w-full"
+                <Image className="w-full"
                   src="/images/lash-lift-model.jpg"
                   quality={90}
                   width={500}
                   height={333}
                   alt="Lash lift på model" />
-                <div
-                  className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
-                </div>
               </a>
             </div>
             <div className="px-6 py-4 text-center sm:text-left">
 
               <a href="#"
-                className="font-semibold text-lg inline-block text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Lash lift</a>
-              <p className="text-shade-950/70 text-sm">
+                className="font-semibold text-lg inline-block font-playfair text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out">Lash lift</a>
+              <p className="text-shade-950/70 text-md">
                 Permanent buk af egne vipper.
               </p>
             </div>

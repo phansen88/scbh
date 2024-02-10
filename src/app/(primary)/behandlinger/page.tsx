@@ -65,7 +65,7 @@ export default function Behandlinger() {
 
 
   return (
-    <div className="container max-w-xl pt-6 md:pt-24 pb-12 mx-auto space-y-24 px-5 lg:max-w-5xl lg:min-h-[992px]">
+    <div className="container max-w-xl pt-6 md:pt-24 pb-16 sm:pb-12 mx-auto space-y-24 px-5 lg:max-w-5xl lg:min-h-[992px]">
       <div className="grid lg:gap-24 lg:grid-cols-2">
         <div>
           <h1 className="text-2xl font-bold tracking-tight sm:text-5xl text-lash-pink-600 max-w-[490px]">Skønne behandlinger til dig</h1>
@@ -101,12 +101,6 @@ export default function Behandlinger() {
 
               </div>
             ))}
-          </div>
-        </div>
-        <div aria-hidden="true" className="mt-10 lg:mt-0 relative hidden lg:flex">
-          <img src="https://source.unsplash.com/random/360x880" alt="random" className="mx-auto rounded-lg shadow-lg bg-gray-800" />
-          <div className="absolute left-[-2rem] top-1/2">
-            <div className="bg-lash-pink-600/80 px-24 py-12"><h2 className="text-white text-4xl font-bold">Skønhed</h2></div>
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* Desktop menu */}
-      <nav className="relative justify-between md:justify-normal bg-lash-pink-500 md:bg-lash-pink-50 text-lash-pink-50 shadow-md">
+      <nav className="relative justify-between md:justify-normal bg-lash-pink-400 md:bg-[#201920] text-lash-pink-50 shadow-md">
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-0'>
           <div className='flex items-center justify-end md:justify-between h-16'>
 
@@ -30,40 +30,47 @@ const Navbar = () => {
               </button>
             </div>
 
-            <ul className="hidden md:flex md:items-baseline md:w-auto md:space-x-4 ml-10">
+            <ul className="hidden md:flex md:items-baseline md:w-auto md:space-x-8 ml-10">
               <li><Link className={clsx(
                 'text-sm',
                 {
-                  'text-lash-pink-700 font-bold': pathname === '/',
-                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/',
+                  'text-lash-pink-200 font-bold': pathname === '/',
+                  'text-lash-pink-300 hover:text-shade-600': pathname !== '/',
                 },
               )} href="/">Forside</Link></li>
               <li><Link className={clsx(
                 'text-sm',
                 {
-                  'text-lash-pink-700 font-bold': pathname === '/behandlinger',
-                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/behandlinger',
+                  'text-lash-pink-200 font-bold': pathname === '/behandlinger',
+                  'text-lash-pink-300 hover:text-shade-600': pathname !== '/behandlinger',
                 },
               )} href="/behandlinger">Behandlinger</Link></li>
               <li><Link className={clsx(
                 'text-sm',
                 {
-                  'text-lash-pink-700 font-bold': pathname === '/om',
-                  'text-lash-pink-600 hover:text-shade-700': pathname !== '/om',
+                  'text-lash-pink-200 font-bold': pathname === '/om',
+                  'text-lash-pink-300 hover:text-shade-600': pathname !== '/om',
                 },
               )} href="/om">Om mig</Link></li>
+              <li><Link className={clsx(
+                'text-sm',
+                {
+                  'text-lash-pink-200 font-bold': pathname === '/praktisk',
+                  'text-lash-pink-300 hover:text-shade-600': pathname !== '/praktisk',
+                },
+              )} href="/praktisk">Praktisk</Link></li>
             </ul>
             <div className='hidden md:flex align-middle'>
               <button type="button"
-                className="text-white bg-curry-700 hover:bg-curry-800 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-curry-600 dark:hover:bg-curry-700"
-                onClick={() => router.push('/api/auth/signup')}>Book tid</button>
+                className="text-white bg-curry-600 hover:bg-curry-600/80 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-curry-600 dark:hover:bg-curry-700"
+                onClick={() => router.push('https://skincarebyhammer.onlinebooq.dk')}>Book tid</button>
             </div>
           </div>
         </div>
       </nav>
       {/* Mobile menu */}
-      <div className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden navbar-menu transition-all ease-in-out delay-150  ${isMenuOpen ? 'w-5/6' : 'w-0'}`}>
-        <div className={`navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
+      <div className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden transition-all ease-in-out delay-150  ${isMenuOpen ? 'w-5/6' : 'w-0'}`}>
+        <div className={`fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'}`}></div>
         <nav className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}>
           <div className="flex items-center mb-8">
             <button className="navbar-close" onClick={toggleMenu}>
@@ -78,8 +85,8 @@ const Navbar = () => {
                 <Link className={clsx(
                   'block p-4 font-semibold rounded-lg',
                   {
-                    'text-curry-900 bg-curry-200': pathname === '/',
-                    'text-gray-400 hover:bg-curry-400 hover:text-curry-950': pathname !== '/',
+                    'text-white bg-[#74384f]/60': pathname === '/',
+                    'text-gray-400': pathname !== '/',
                   },
                 )}
                   href="/"
@@ -89,23 +96,40 @@ const Navbar = () => {
                 <Link className={clsx(
                   'block p-4 font-semibold rounded-lg',
                   {
-                    'text-curry-900 bg-curry-200': pathname === '/behandlinger',
-                    'text-gray-400 hover:bg-curry-400 hover:text-curry-950': pathname !== '/behandlinger',
+                    'text-white bg-[#74384f]/60': pathname === '/behandlinger',
+                    'text-gray-400': pathname !== '/behandlinger',
                   },
                 )}
                   href="/behandlinger"
                   onClick={toggleMenu}>Behandlinger</Link>
               </li>
               <li className="mb-1">
-                <Link className="block p-4 font-semibold text-gray-400 hover:bg-curry-400 hover:text-curry-950 rounded"
+                <Link className={clsx(
+                  'block p-4 font-semibold rounded-lg',
+                  {
+                    'text-white bg-[#74384f]/60': pathname === '/om',
+                    'text-gray-400': pathname !== '/om',
+                  },
+                )}
                   href="/om"
                   onClick={toggleMenu}>Om mig</Link>
+              </li>
+              <li className="mb-1">
+                <Link className={clsx(
+                  'block p-4 font-semibold rounded-lg',
+                  {
+                    'text-white bg-[#74384f]/60': pathname === '/praktisk',
+                    'text-gray-400': pathname !== '/praktisk',
+                  },
+                )}
+                  href="/praktisk"
+                  onClick={toggleMenu}>Praktisk</Link>
               </li>
             </ul>
           </div>
           <div className="mt-auto">
             <div className="pt-6">
-              <a className="block px-4 py-3 mb-2 leading-loose text-sm text-center text-white font-semibold bg-curry-600 hover:bg-curry-800 rounded-xl" href="#">Book tid</a>
+              <a className="block px-4 py-3 mb-2 leading-loose text-md text-center text-white font-semibold bg-[#E4B153] hover:bg-curry-800 rounded-xl" href="#">Book tid</a>
             </div>
           </div>
         </nav>

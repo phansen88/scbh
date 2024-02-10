@@ -163,7 +163,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
               <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
                 <span
                   data-tooltip-target="money"
-                  className="cursor-pointer rounded-full border border-lash-pink-500/5 bg-lash-pink-500/5 p-3 text-lash-pink-500 transition-colors hover:border-lash-pink-500/10 hover:bg-lash-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
+                  className="cursor-pointer rounded-full border border-lash-pink-500/5 bg-lash-pink-500/5 p-3 text-lash-pink-400 transition-colors hover:border-lash-pink-500/10 hover:bg-lash-pink-500/10 hover:!opacity-100 group-hover:opacity-70"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +183,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
                 </span>
                 <div
                   data-tooltip="money"
-                  className="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-sm font-normal text-white focus:outline-none"
+                  className="absolute z-50 whitespace-normal break-words rounded-lg bg-black py-1.5 px-3 font-sans text-md font-normal text-white focus:outline-none"
                 >
                   {product.price}
                 </div>
@@ -193,7 +193,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ products }) => {
             </div>
             <div className="p-6 pt-3">
               <button
-                className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-white shadow-md shadow-lash-pink-500/20 transition-all hover:shadow-lg hover:shadow-lash-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="block w-full select-none rounded-lg bg-pink-500 py-3.5 px-7 text-center align-middle font-sans text-md font-bold uppercase text-white shadow-md shadow-lash-pink-500/20 transition-all hover:shadow-lg hover:shadow-lash-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                 type="button"
                 data-ripple-light="true"
               >

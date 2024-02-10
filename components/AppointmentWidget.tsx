@@ -23,9 +23,9 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
   };
 
   return (
-    <div className="text-center">
-          <h2 className="text-2xl font-bold text-lash-pink-950 mb-4">
-            Hvad tilbyder jeg
+    <div className="text-left">
+          <h2 className="text-2xl text-center font-playfair font-bold text-lash-pink-950 mb-4">
+            Hvad tilbyder jeg?
           </h2>
           { /*
           <form>
@@ -77,7 +77,11 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
             </button>
           </form>
                 */ }
-                <p>En masse tekst her...</p>
+                <p className='block font-sans text-base font-normal leading-relaxed text-inherit antialiased'>Skincare by Hammer er en lokal lille skønhedsklinik, hvor du vil opleve en dejlig stemning og ro.</p>
+                <p className='block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4'>Når du træder ind ad døren bliver du mødt af dæmpet musik, dejlige milde æteriske dufte og en rolig stemning. Hos Skincare by Hammer er du i fokus, og jeg ønsker at du skal have en sanselig og afslappende behandling, hvor du kan trækket stikket for en stund, og få lov til at være dig - ikke mor, kæreste, kone/mand, ven, kollega mm. men bare DIG.</p>
+                <p className='block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4'>Du er altid velkommen til at bestille en stille behandling, eller sige at du ønsker en stille behandling til mig når du kommer i klinikken – Du skal ikke være usikker eller utryg ved at bede om en stille behandling, da det skal være rart for dig, ud fra dine ønsker og behov.</p>
+                <p className='block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4'>Hos Skincare by Hammer tilbyder jeg Lashlift, Browlamination, Browmapping, retning af bryn, samt farve af bryn og vipper.</p>
+                <p className='block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4'>Jeg vil på et senere tidspunkt også kunne tilbyde diverse voksbehandlinger og ansigtsbehandlinger.</p>
         </div>
 
   );

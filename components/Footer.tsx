@@ -1,8 +1,6 @@
 'use client'
-import Image from 'next/image'
-import { PT_Sans_Narrow } from 'next/font/google';
-const ptSansNarrow = PT_Sans_Narrow({ subsets: ['latin'], weight: "400" })
-const headerClasses = `${ptSansNarrow.className} text-4xl text-lash-pink-500`;
+import Link from 'next/link';
+import Image from 'next/image';
 const Footer = () => {
   // Opening hours for each day
   const openingHours = [
@@ -20,16 +18,17 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-shade-950 text-lash-pink-400 pt-12 pb-8 md:pb-0">
+    <footer className="bg-shade-950 text-lash-pink-400 font-playfair pt-12 pb-8 md:pb-0">
       <div className='grid'>
-        <div className="col-start-1 row-start-1 mx-auto my-auto">
-          <h1 className={headerClasses}>Følg os på sociale medier</h1>
+        <div className="grid col-start-1 row-start-1 mx-auto my-auto">
+          <h1 className={`font-playfair text-center md:text-left text-4xl text-lash-pink-500`}>Følg os på sociale medier</h1>
         </div>
-        <div className="col-start-1 row-start-2 mx-auto mb-12">
+        <div className="grid col-start-1 row-start-2 mx-auto mb-12">
 
           <div className="flex flex-col items-center  text-center text-white">
             <div className="container pt-9">
               <div className="mb-9 flex justify-center">
+                {/*
                 <a href="#!" className="mr-9 text-lash-pink-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +39,7 @@ const Footer = () => {
                     <path
                       d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
-                </a>
+  </a> */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-8 w-8"
@@ -54,31 +53,37 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-start-1 row-start-3 mb-24 relative">
-          <div className="absolute inset-0 flex justify-center items-center ">
+        <div className="col-start-1 row-start-3 -mt-12 sm:-mt-0 mb-12 md:mb-24 relative">
+          <div className="absolute inset-8 sm:inset-0 flex justify-center items-center">
             <div className="w-[80rem] border-b border-lash-pink-500"></div>
           </div>
         </div>
-        <div className="col-start-1 row-start-4">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-5 xl:max-w-[75rem]">
+        <div className="grid col-start-1 row-start-4 justify-center items-center md:justify-normal">
+          <div className="mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16 px-5 xl:max-w-[75rem]">
             {/* Column 1: Logo with address underneath */}
-            <div>
-              {/*<img
-            src="/images/logo.png"
-            alt="Salon Logo"
-            className="w-32 h-32 md:w-48 md:h-48 object-cover object-center mb-4"
-  />*/}Logo
-              <p className="text-sm">Adresse: Adressevej 123, Hedehusene, 2640</p>
+            <div className='font-assistant'>
+              <Link href="/">
+              <Image 
+                className='w-60 h-60 md:w-48 md:h-48 object-cover object-center mb-4'
+                src={'/images/logo_no_face.svg'}
+                alt='Skincare by Hammer logo'
+                width={300}
+                height={300}
+                quality={90}
+                 />
+                 </Link>
+              <p className="text-sm">Adresse: Bavneåsen 38, Hedehusene, 2640</p>
               <p className="text-sm">Telefon: 12 34 56 78</p>
+              <p className='text-sm'>CVR: 44620898</p>
             </div>
 
             {/* Column 2: Opening hours */}
             <div>
-              <h3 className="text-xl font-semibold mb-2">Åbningstider</h3>
+              <h3 className="text-xl text-lash-pink-400/90 font-semibold font-playfair mb-2 sm:mt-4">Åbningstider</h3>
               <ul className="text-sm">
                 {openingHours.map(({ day, hours }) => (
-                  <li className='mb-1.5' key={day}>
-                    <span className='text-md'><strong>{day}</strong></span>: <span className='ml-3.5'>{hours}</span>
+                  <li className='mb-1.5 text-lash-pink-500 font-assistant' key={day}>
+                    <span><strong>{day}</strong></span>: <span className='ml-3.5'>{hours}</span>
                   </li>
                 ))}
               </ul>
@@ -86,10 +91,10 @@ const Footer = () => {
 
             {/* Column 3: Services offered */}
             <div>
-              <h3 className="text-xl font-semibold mb-2">Services Vi Tilbyder</h3>
-              <ul className="list-disc list-inside text-left text-md">
+              <h3 className="text-xl text-lash-pink-400/90 font-semibold font-playfair mb-2 sm:mt-4">Services Vi Tilbyder</h3>
+              <ul className="list-disc list-inside text-sm text-left">
                 {servicesOffered.map((service, index) => (
-                  <li className='mb-1.5' key={index}>{service}</li>
+                  <li className='mb-1.5 text-lash-pink-500 font-assistant' key={index}>{service}</li>
                 ))}
               </ul>
             </div>
@@ -97,7 +102,7 @@ const Footer = () => {
             {/* Column 4: Google location with Trustpilot rating underneath */}
             <div>
               {/* Google Maps component */}
-              <div className="mb-2.5">
+              <div className="mb-2.5 sm:mt-6">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4500.943828470146!2d12.181603152303287!3d55.663393443852364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525ed28f696921%3A0xa00afcc1d5072c0!2s2640%20Fl%C3%B8ng!5e0!3m2!1sda!2sdk!4v1700231359214!5m2!1sda!2sdk"
                   width="600"
@@ -140,8 +145,8 @@ const Footer = () => {
 
         {/* Copyright section */}
         <div
-          className="w-full text-sm p-4 text-center text-lash-pink-500">
-          © 2023 Copyright:
+          className="w-full text-sm p-4 text-center text-lash-pink-500 sm:mb-8 sm:mt-16">
+          © 2024 Copyright:
           <a
             className="text-lash-pink-500 dark:text-lash-pink-200"
             href="/"
