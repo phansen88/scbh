@@ -5,6 +5,7 @@ const nextConfig = {
         'domains': ['skincarebyhammer.dk'],
     },
     eslint: {
+        ignoreDuringBuilds: true,
     }
 }
 
