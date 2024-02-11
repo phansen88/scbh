@@ -51,7 +51,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              <div className="col-span-1 -mt-6 sm:-mt-0 mb-6 md:mb-24 relative flex sm-hidden">
+              <div className="col-span-1 -mt-6 sm:-mt-0 mb-6 md:mb-24 relative flex sm:hidden">
                 <div className="absolute inset-8 sm:inset-0 flex justify-center items-center">
                   <div className="w-[80rem] border-b border-lash-pink-500"></div>
                 </div>
