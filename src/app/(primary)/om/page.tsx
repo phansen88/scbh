@@ -35,7 +35,7 @@ export default function Om() {
         </div>
         <div className="hidden sm:flex">
         <Image className="rounded-full object-cover h-full w-full shadow-md"
-            src="/images/sara.jpeg"
+            src="/images/sara.jpg"
             quality={90}
             width={500}
             height={400}
