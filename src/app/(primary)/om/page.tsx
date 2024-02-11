@@ -9,11 +9,11 @@ export default function Om() {
         <div className="h-32 w-32">
 
           <Image className="rounded-full object-cover h-full w-full shadow-md"
-            src="/sara.jpg"
-            quality={90}
+            src="/sara.png"
+            quality={80}
             width={500}
             height={400}
-            alt="Sara" />
+            alt="Billede af Sara" />
         </div>
       </div>
       <div className="grid lg:gap-24 lg:grid-cols-2">
@@ -35,11 +35,11 @@ export default function Om() {
         </div>
         <div className="hidden sm:flex">
         <Image className="rounded-full object-cover h-full w-full shadow-md"
-            src="/sara.jpg"
-            quality={90}
+            src="/sara.png"
+            quality={80}
             width={500}
             height={400}
-            alt="Sara" />
+            alt="Profilbillede af Sara" />
         </div>
       </div>
     </div>
