@@ -46,7 +46,7 @@ const Hero = () => {
 
               <div className='col-span-1'>
                 <div className='flex flex-row flex-wrap justify-center'>
-                  <Image className='object-cover w-full h-full mx-auto rounded-md lg:max-w-sm lg:mx-0 mt-6 md:mt-0' width={100} height={100} quality={90} src='/images/logo.svg' alt='Skincare by Hammer logo' />
+                  <Image className='object-cover w-full h-full mx-auto rounded-md lg:max-w-sm lg:mx-0 mt-6 md:mt-0' width={100} height={100} quality={90} src='/logo.svg' alt='Skincare by Hammer logo' />
                   <h1 className="font-playfair text-2xl md:text-5xl text-lash-pink-400 mt-2 md:mt-8">Få din <span className="text-lash-pink-800">skønhed</span> til at blomstre</h1>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const Hero = () => {
             <div className="relative">
               <a href="#">
                 <Image className="w-full"
-                  src="/images/lash-lift-model.jpg"
+                  src="/lash-lift-model.jpg"
                   quality={80}
                   width={500}
                   height={333}
@@ -101,7 +101,7 @@ const Hero = () => {
             <div className="relative">
               <a href="#">
                 <Image className="w-full"
-                  src="/images/lash-lift-model.jpg"
+                  src="/lash-lift-model.jpg"
                   quality={90}
                   width={500}
                   height={333}

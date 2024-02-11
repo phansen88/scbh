@@ -65,7 +65,7 @@ const Footer = () => {
               <Link href="/">
               <Image 
                 className='w-60 h-60 md:w-48 md:h-48 object-cover object-center mb-4'
-                src={'/images/logo_no_face.svg'}
+                src={'/logo_no_face.svg'}
                 alt='Skincare by Hammer logo'
                 width={300}
                 height={300}
@@ -113,7 +113,7 @@ const Footer = () => {
               {/* Trustpilot rating component */}
               <div className="hidden items-center">
                 <Image
-                  src={'/images/trustpilot.svg'}
+                  src={'/trustpilot.svg'}
                   alt={'trustpilot'}
                   quality={80}
                   width={144}
