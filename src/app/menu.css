@@ -1,9 +1,13 @@
 .menu {
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr repeat(4, auto) 1fr;
-  grid-column-gap: 1.875rem ;
+  grid-column-gap: 1.875rem;
   justify-items: center;
   font-size: 1rem;
 }
-a:nth-child(1) { grid-column-start: 1; }
- a:nth-child(2) { margin-left: auto; }
+a:nth-child(1) {
+  grid-column-start: 1;
+}
+a:nth-child(2) {
+  margin-left: auto;
+}

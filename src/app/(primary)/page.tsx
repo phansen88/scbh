@@ -1,8 +1,7 @@
-import Image from 'next/image'
+import Image from 'next/image';
 import Hero from '@/components/Hero';
 import NavbarBottom from '@/components/NavbarBottom';
 import ProductCard, { Product } from '@/components/ProductCard';
-
 
 const products: Product[] = [
   {
@@ -22,7 +21,8 @@ const products: Product[] = [
   {
     id: 3,
     name: '3D Silk False Lashes',
-    description: 'Gør dig klar til en aften i byen med vores 3D silk falske vipper.',
+    description:
+      'Gør dig klar til en aften i byen med vores 3D silk falske vipper.',
     price: 12.99,
     imageUrl: '/3d-lashes.jpg',
   },
@@ -64,7 +64,6 @@ const products: Product[] = [
 ];
 
 const Home = () => {
-
   return (
     <>
       {/* Inkluder Navbar komponenten */}

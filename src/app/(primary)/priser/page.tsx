@@ -1,3 +1,3 @@
 export default function Priser() {
-    return <div>About</div>
-  }
+  return <div>About</div>;
+}

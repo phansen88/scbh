@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
 
     // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -28,7 +28,7 @@ module.exports = {
           '900': '#582844',
           '950': '#3a182d',
         },
-        'shade': {
+        shade: {
           '50': '#cec4de',
           '100': '#c8bdd6',
           '200': '#bcadcc',
@@ -41,7 +41,7 @@ module.exports = {
           '900': '#322b36',
           '950': '#28222b',
         },
-        'curry': {
+        curry: {
           '50': '#fdfac9',
           '100': '#fef9a5',
           '200': '#fef16d',
@@ -54,8 +54,8 @@ module.exports = {
           '900': '#844e15',
           '950': '#542b08',
         },
-      }
+      },
     },
   },
   plugins: [],
-}
+};
