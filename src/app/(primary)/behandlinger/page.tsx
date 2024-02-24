@@ -105,7 +105,7 @@ export default function Behandlinger() {
                   <p className="font-medium leading-6 text-gray-800">
                     {service.title}
                   </p>
-                  <p className="ml-10 text-gray-600">{service.price} kr</p>
+                  <p className="ml-10 text-gray-600">{service.price}</p>
                 </div>
               </div>
             ))}
@@ -128,7 +128,7 @@ export default function Behandlinger() {
                   <p className="font-medium leading-6 text-gray-800">
                     {service.title}
                   </p>
-                  <p className="ml-10 text-gray-600">{service.price} kr</p>
+                  <p className="ml-10 text-gray-600">{service.price}</p>
                 </div>
               </div>
             ))}

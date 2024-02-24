@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display } from 'next/font/google';
 import { Assistant } from 'next/font/google';
+
 const playfairSans = Playfair_Display({
   subsets: ['latin'],
   weight: '400',
