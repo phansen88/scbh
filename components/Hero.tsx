@@ -49,6 +49,7 @@ const Hero = () => {
                     height={100}
                     quality={90}
                     src="/logo.svg"
+                    priority={true}
                     alt="Skincare by Hammer logo"
                   />
                   <h1 className="font-playfair text-2xl md:text-5xl text-lash-pink-400 mt-2 md:mt-8">
@@ -82,12 +83,12 @@ const Hero = () => {
             <div className="relative">
               <a href="#">
                 <Image
-                  className="w-full"
-                  src="/lash-lift-model.jpg"
+                  className="w-full object-cover max-h-[23rem]"
+                  src="/browlamination-model.jpg"
                   quality={80}
                   width={500}
                   height={333}
-                  alt="Brow mapping"
+                  alt="Browlamination"
                 />
               </a>
             </div>
@@ -96,11 +97,11 @@ const Hero = () => {
                 href="#"
                 className="font-semibold text-lg inline-block font-playfair text-shade-950 hover:text-indigo-600 transition duration-500 ease-in-out"
               >
-                Brow mapping
+                Browlamination
               </a>
               <p className="text-shade-950/70 text-md">
-                Mapping af dine bryn så du får den helt perfekte form til din
-                ansigtsform
+                Permanent behandling for mere symmetriske, fyldige og definerede
+                bryn
               </p>
             </div>
           </div>
@@ -108,7 +109,7 @@ const Hero = () => {
             <div className="relative">
               <a href="#">
                 <Image
-                  className="w-full"
+                  className="w-full object-cover max-h-[23rem]"
                   src="/lash-lift-model.jpg"
                   quality={90}
                   width={500}

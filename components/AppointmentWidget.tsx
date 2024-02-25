@@ -86,7 +86,7 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
         Når du træder ind ad døren bliver du mødt af dæmpet musik, dejlige milde
         æteriske dufte og en rolig stemning. Hos Skincare by Hammer er du i
         fokus, og jeg ønsker at du skal have en sanselig og afslappende
-        behandling, hvor du kan trækket stikket for en stund, og få lov til at
+        behandling, hvor du kan trække stikket for en stund, og få lov til at
         være dig - ikke mor, kæreste, kone/mand, ven, kollega mm. men bare DIG.
       </p>
       <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4">

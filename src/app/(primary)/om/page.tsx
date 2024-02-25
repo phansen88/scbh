@@ -38,7 +38,7 @@ export default function Om() {
               flere år haft en drøm om at åbne min egen skønhedsklinik. Derfor
               har jeg i marts 2024 åbnet Skincare by Hammer, som er mit lille
               hjertebarn. Jeg brænder for skønhedsfaget, for at skabe flotte
-              resultater og samtidig give en behagelig oplevelese for kunden.
+              resultater og samtidig give en behagelig oplevelse for kunden.
               Glæden hos mig er kæmpe stor, når en afslappet, smilende og
               tilfreds kunde forlader klinikken med flotte bryn og vipper.
             </p>

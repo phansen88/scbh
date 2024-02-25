@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,9 +99,10 @@ const Navbar = () => {
               <button
                 type="button"
                 className="text-white bg-curry-600 hover:bg-curry-600/80 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-curry-600 dark:hover:bg-curry-700"
-                onClick={() =>
-                  router.push('https://skincarebyhammer.onlinebooq.dk')
-                }
+                onClick={() => [
+                  sendGTMEvent({ event: 'buttonClicked', value: 'book' }),
+                  router.push('https://skincarebyhammer.onlinebooq.dk'),
+                ]}
               >
                 Book tid
               </button>
@@ -198,6 +200,9 @@ const Navbar = () => {
                 className="block px-4 py-3 mb-2 leading-loose text-md text-center text-white font-semibold bg-[#E4B153] hover:bg-curry-800 rounded-xl"
                 href="https://skincarebyhammer.onlinebooq.dk"
                 target="_blank"
+                onClick={() => [
+                  sendGTMEvent({ event: 'buttonClicked', value: 'book' }),
+                ]}
               >
                 Book tid
               </Link>
