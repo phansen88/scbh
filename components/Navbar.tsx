@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
-import { sendGAEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -100,7 +100,7 @@ const Navbar = () => {
                 type="button"
                 className="text-white bg-curry-600 hover:bg-curry-600/80 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-curry-600 dark:hover:bg-curry-700"
                 onClick={() => [
-                  sendGAEvent({
+                  sendGTMEvent({
                     event: 'buttonClicked',
                     value: 'book',
                   }),
@@ -115,14 +115,12 @@ const Navbar = () => {
       </nav>
       {/* Mobile menu */}
       <div
-        className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden transition-all ease-in-out delay-150  ${
-          isMenuOpen ? 'w-5/6' : 'w-0'
-        }`}
+        className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden transition-all ease-in-out delay-150  ${isMenuOpen ? 'w-5/6' : 'w-0'
+          }`}
       >
         <div
-          className={`fixed inset-0 bg-gray-800 opacity-25 ${
-            isMenuOpen ? 'block' : 'hidden'
-          }`}
+          className={`fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'
+            }`}
         ></div>
         <nav
           className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}
@@ -204,7 +202,7 @@ const Navbar = () => {
                 href="https://skincarebyhammer.onlinebooq.dk"
                 target="_blank"
                 onClick={() => [
-                  sendGAEvent({
+                  sendGTMEvent({
                     event: 'buttonClicked',
                     value: 'book',
                   }),

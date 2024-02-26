@@ -2,7 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Playfair_Display } from 'next/font/google';
 import { Assistant } from 'next/font/google';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const playfairSans = Playfair_Display({
   subsets: ['latin'],
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bodyClasses}>{children}</body>
-      <GoogleAnalytics gaId='G-713B1XGLT2' />
+      <GoogleTagManager gtmId='GTM-MXW6F7F' />
     </html>
   );
 }
