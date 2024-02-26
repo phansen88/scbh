@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bodyClasses}>{children}</body>
-      <GoogleTagManager gtmId='GTM-MXW6F7F' />
+      <GoogleTagManager gtmId='GTM-MXW6F7F6' />
     </html>
   );
 }
