@@ -16,8 +16,9 @@ const assistantSans = Assistant({
 });
 
 export const metadata: Metadata = {
-  title: 'Skincare by Hammer',
-  description: 'Ekslusive skøndhedsbehandlinger i Hedehusene',
+  title: 'Skincare by Hammer - Skønhedsklinik i Hedehusene',
+  description:
+    'Din lokale skønhedsklinik. Ekslusive skøndhedsbehandlinger i Hedehusene',
   icons: {
     icon: '/logo.svg',
   },
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bodyClasses}>{children}</body>
-      <GoogleTagManager gtmId='GTM-MXW6F7F6' />
+      <GoogleTagManager gtmId="GTM-MXW6F7F6" />
     </html>
   );
 }
