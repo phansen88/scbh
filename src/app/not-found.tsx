@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <>
@@ -8,18 +10,19 @@ export default function NotFound() {
             Siden kunne ikke findes
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-            Undskyld, jeg koder stadig siden.
+            Undskyld, siden kodes stadig.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <Link
               href="/"
-              className="rounded-md bg-lash-pink-500 px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-lash-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-book-600"
+              className="rounded-md bg-lash-pink-500 px-5 py-5 text-md font-semibold text-white shadow-sm hover:bg-lash-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-book-600"
             >
               Gå tilbage til forsiden
-            </a>
+            </Link>
+            {/*
             <a href="/" className="text-md font-semibold text-gray-900">
               Kontakt support <span aria-hidden="true">&rarr;</span>
-            </a>
+  </a> */}
           </div>
         </div>
       </main>
