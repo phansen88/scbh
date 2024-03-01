@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
-import { sendGTMEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from '@next/third-parties/google';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,6 +28,7 @@ const Navbar = () => {
                 onClick={toggleMenu}
                 aria-expanded="false"
               >
+                <span className="sr-only">Close</span>
                 <svg
                   className="h-6 w-6 block fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,18 +116,21 @@ const Navbar = () => {
       </nav>
       {/* Mobile menu */}
       <div
-        className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden transition-all ease-in-out delay-150  ${isMenuOpen ? 'w-5/6' : 'w-0'
-          }`}
+        className={`h-full fixed z-50 top-0 left-0 overflow-x-hidden transition-all ease-in-out delay-150  ${
+          isMenuOpen ? 'w-5/6' : 'w-0'
+        }`}
       >
         <div
-          className={`fixed inset-0 bg-gray-800 opacity-25 ${isMenuOpen ? 'block' : 'hidden'
-            }`}
+          className={`fixed inset-0 bg-gray-800 opacity-25 ${
+            isMenuOpen ? 'block' : 'hidden'
+          }`}
         ></div>
         <nav
           className={`flex flex-col h-full relative w-full py-6 px-6 bg-white border-r overflow-y-auto`}
         >
           <div className="flex items-center mb-8">
             <button className="navbar-close" onClick={toggleMenu}>
+              <span className="sr-only">Close</span>
               <svg
                 className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
                 xmlns="http://www.w3.org/2000/svg"

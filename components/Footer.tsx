@@ -52,7 +52,6 @@ const Footer = () => {
                   href="http://instagram.com/skincare_by_hammer/"
                   target="_blank"
                   aria-label="instagram"
-                  aria-description="Instagram Link to Skincare by Hammer"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -138,6 +137,7 @@ const Footer = () => {
               {/* Google Maps component */}
               <div className="mb-2.5 sm:mt-6">
                 <iframe
+                  title="Google maps - Skincare by Hammer"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.6523002426575!2d12.18978517678413!3d55.660256273049995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525ec6219f9b55%3A0xf483ae699e6ee84c!2sBavne%C3%A5sen%2038%2C%202640%20Hedehusene!5e0!3m2!1sda!2sdk!4v1708463140032!5m2!1sda!2sdk"
                   width="600"
                   height="450"
@@ -171,6 +171,7 @@ const Footer = () => {
           </div>
         </div>
 
+        {/*
         <div className="col-start-1 pb-2 row-start-5 px-6 md:px-0 md:mx-auto mb-12 hidden">
           <div className="w-full mt-8 bg-lash-pink-100 border rounded-md lg:max-w-md dark:border-gray-700 focus-within:border-curry-400 focus-within:ring focus-within:ring-curry-300 dark:focus-within:border-curry-400 focus-within:ring-opacity-40">
             <form className="flex flex-col lg:flex-row">
@@ -189,6 +190,7 @@ const Footer = () => {
             </form>
           </div>
         </div>
+                */}
 
         {/* Copyright section */}
         <div className="w-full text-sm p-4 text-center text-lash-pink-500 sm:mb-8 sm:mt-16">

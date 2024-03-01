@@ -91,13 +91,13 @@ export default function Behandlinger() {
           </div>
           <div
             className="space-y-2 mt-4"
-            aria-description="Oversigt over behandlinger inden for Bryn og vipper inkl. priser"
+            aria-label="Oversigt over behandlinger inden for Bryn og vipper inkl. priser"
           >
             {services.map((service, index) => (
               <div
                 className="flex"
                 key={index}
-                aria-description={
+                aria-label={
                   service.title + ` til pris: ` + service.price + `kroner.`
                 }
               >
