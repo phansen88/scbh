@@ -23,7 +23,7 @@ export default function Behandlinger() {
     {
       title: 'Browmapping inkl. retning, farve og styling',
       description: '',
-      price: 300,
+      price: 295,
       duration: 30,
     },
     {
@@ -70,6 +70,12 @@ export default function Behandlinger() {
         'Browmapping eksl. ret og farve, i forbindelse med med anden behandling',
       description: '',
       price: 100,
+      duration: 10,
+    },
+    {
+      title: 'Retning af bryn i forbindelse med anden behandling',
+      description: '',
+      price: 80,
       duration: 10,
     },
   ];

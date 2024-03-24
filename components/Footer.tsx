@@ -10,8 +10,16 @@ const Footer = () => {
     { day: 'Torsdag', hours: '11:00 - 20:30' },
     { day: 'Fredag', hours: '09:30 - 15:15' },
     {
-      day: 'Lørdag, Søndag og Helligdage',
-      hours: 'Lukket, eller efter aftale',
+      day: 'Lørdag',
+      hours: 'Efter aftale',
+    },
+    {
+      day: 'Søndag',
+      hours: 'Efter aftale',
+    },
+    {
+      day: 'Helligdage',
+      hours: 'Lukket',
     },
   ];
 
