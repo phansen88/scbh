@@ -25,9 +25,11 @@ const Footer = () => {
 
   // Services offered as an array of bullet points
   const servicesOffered = [
+    'Japansk Lifting',
     'Browlamination',
     'Lashlift',
     'Retning af bryn, farvning af vipper og bryn',
+    'Voks behandlinger',
   ];
 
   return (
