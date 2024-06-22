@@ -79,8 +79,8 @@ const AppointmentWidget = ({ timeslots }: AppointmentWidgetProps) => {
           </form>
                 */}
       <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased">
-        Skincare by Hammer er en lokal lille skønhedsklinik, hvor du vil opleve
-        en dejlig stemning og ro.
+        Skincare by Hammer er en lokal lille skønhedsklinik i Hedehusene, hvor
+        du vil opleve en dejlig stemning og ro.
       </p>
       <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased mt-4">
         Når du træder ind ad døren bliver du mødt af dæmpet musik, dejlige milde
