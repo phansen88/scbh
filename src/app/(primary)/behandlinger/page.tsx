@@ -1,30 +1,45 @@
 import { title } from 'process';
 
 export default function Behandlinger() {
-  const services = [
+  const lashServices = [
     {
-      title:
-        'Browlamination/lift inkl. retning af bryn og fugtbehandling/efterpleje',
+      title: 'Lashlift Deluxe',
+      description: '',
+      price: 500,
+      duration: 60,
+      active: true,
+    },
+    {
+      title: 'Lashlift',
+      description: '',
+      price: 420,
+      duration: 50,
+      active: true,
+    },
+    {
+      title: 'Browlift Deluxe',
+      description: '',
+      price: 530,
+      duration: 60,
+      active: true,
+    },
+    {
+      title: 'Browlift',
       description: '',
       price: 450,
       duration: 50,
       active: true,
     },
     {
-      title: 'Lashlift inkl. keratinkur og fugtbehandling/efterpleje',
-      description: '',
-      price: 420,
-      duration: 45,
-      active: true,
-    },
-    {
-      title:
-        'Kombi af Lashlift/Browlamination, inkl. ret, farve af bryn og vipper, og fugtkur og efterpleje',
+      title: 'Kombi af Lashlift/Browlift Deluxe',
       description: '',
       price: 875,
       duration: 90,
       active: true,
     },
+  ];
+
+  const services = [
     {
       title: 'Browmapping inkl. retning, farve og styling',
       description: '',
@@ -33,10 +48,33 @@ export default function Behandlinger() {
       active: true,
     },
     {
-      title: 'Retning af bryn, samt farve af bryn og vipper, inkl. let styling',
+      title:
+        'Voks af bryn, samt farve af bryn og vipper (mere end 6 uger imellem)',
+      description: '',
+      price: 335,
+      duration: 45,
+      active: true,
+    },
+    {
+      title:
+        'Voks/retning af bryn, samt farve af bryn og vipper (mindre end 6 uger imellem)',
       description: '',
       price: 295,
       duration: 35,
+      active: true,
+    },
+    {
+      title: 'Voks af bryn (mere end 6 uger imellem)',
+      description: '',
+      price: 185,
+      duration: 30,
+      active: true,
+    },
+    {
+      title: 'Voks/Retning af bryn -  (mindre end 6 uger imellem)',
+      description: '',
+      price: 145,
+      duration: 20,
       active: true,
     },
     {
@@ -53,50 +91,21 @@ export default function Behandlinger() {
       duration: 15,
       active: true,
     },
-    {
-      title: 'Retning af bryn',
-      description: '',
-      price: 135,
-      duration: 15,
-      active: true,
-    },
   ];
 
   const faceServives = [
     {
       title: 'Japansk Lifting med et ekstra touch - 90 min',
       description: '',
-      price: 995,
+      price: 775,
       duration: 90,
       active: true,
     },
     {
       title: 'Japansk Lifting - 60 min',
       description: '',
-      price: 695,
+      price: 575,
       duration: 60,
-      active: true,
-    },
-    {
-      title: 'Japansk Lifting - 30 min',
-      description: '',
-      price: 395,
-      duration: 30,
-      active: true,
-    },
-    {
-      title: 'Japansk Lifting forløb 5 x 60 min. (Spar 500,-)',
-      description: '',
-      price: 2975,
-      duration: 60,
-      active: true,
-    },
-    {
-      title:
-        'Japansk Lifting med et ekstra touch forløb 5 x 90 min. (Spar 500,-)',
-      description: '',
-      price: 4475,
-      duration: 90,
       active: true,
     },
     {
@@ -117,16 +126,16 @@ export default function Behandlinger() {
 
   const waxServices = [
     {
-      title: 'Voks af hele ben',
+      title: 'Voks af halve ben inkl. knæ',
       description: '',
-      price: 425,
-      duration: 50,
+      price: 295,
+      duration: 30,
       active: true,
     },
     {
-      title: 'Voks af halve ben',
+      title: 'Voks af ryg',
       description: '',
-      price: 325,
+      price: 295,
       duration: 30,
       active: true,
     },
@@ -140,7 +149,28 @@ export default function Behandlinger() {
     {
       title: 'Voks af armhuler',
       description: '',
-      price: 175,
+      price: 160,
+      duration: 20,
+      active: true,
+    },
+    {
+      title: 'Voks af overlæbe og hage',
+      description: '',
+      price: 160,
+      duration: 20,
+      active: true,
+    },
+    {
+      title: 'Voks af kinder/kæbe',
+      description: '',
+      price: 160,
+      duration: 20,
+      active: true,
+    },
+    {
+      title: 'Voks af næsebor',
+      description: '',
+      price: 95,
       duration: 15,
       active: true,
     },
@@ -156,20 +186,6 @@ export default function Behandlinger() {
       description: '',
       price: 95,
       duration: 15,
-      active: true,
-    },
-    {
-      title: 'Voks af overlæbe og hage',
-      description: '',
-      price: 160,
-      duration: 20,
-      active: true,
-    },
-    {
-      title: 'Voks af ryg',
-      description: '',
-      price: 395,
-      duration: 30,
       active: true,
     },
   ];
@@ -190,24 +206,31 @@ export default function Behandlinger() {
       active: true,
     },
     {
+      title: 'Stillebehandling',
+      description: '',
+      price: 0,
+      duration: 10,
+      active: true,
+    },
+    {
       title:
         'Browmapping eksl. ret og farve, i forbindelse med med anden behandling',
       description: '',
-      price: 100,
+      price: 75,
       duration: 10,
       active: true,
     },
     {
       title: 'Retning af bryn i forbindelse med anden behandling',
       description: '',
-      price: 80,
+      price: 100,
       duration: 10,
       active: true,
     },
     {
       title: 'Bright Eyed Hydrogel Mask',
       description: '',
-      price: 40,
+      price: 30,
       duration: 0,
       active: true,
     },
@@ -231,7 +254,7 @@ export default function Behandlinger() {
           <div className="flex">
             <div className="mt-5 sm:mt-8">
               <h3 className="text-lg sm:text-2xl font-bold leading-6 text-lash-pink-600">
-                Bryn og vipper
+                Lashlift og Browlift
               </h3>
             </div>
           </div>
@@ -239,12 +262,40 @@ export default function Behandlinger() {
             className="space-y-2 mt-4"
             aria-label="Oversigt over behandlinger inden for Bryn og vipper inkl. priser"
           >
-            {services.map((service, index) =>
+            {lashServices.map((service, index) =>
               service.active ? (
                 <div
                   className="flex"
                   key={index}
                   aria-label={
+                    service.title + ` til pris: ` + service.price + `kroner.`
+                  }
+                >
+                  <div className="flex items-baseline justify-between flex-1 mt-1 mb-1.5">
+                    <p className="font-medium leading-6 text-gray-800">
+                      {service.title}
+                    </p>
+                    <p className="ml-10 text-gray-600">{service.price},-</p>
+                  </div>
+                </div>
+              ) : (
+                ''
+              )
+            )}
+
+            <div className="flex">
+              <div className="mt-8">
+                <h3 className="text-lg sm:text-2xl font-bold leading-6 text-lash-pink-600">
+                  Bryn og vipper
+                </h3>
+              </div>
+            </div>
+            {services.map((service, index) =>
+              service.active ? (
+                <div
+                  className="flex"
+                  key={index}
+                  aria-description={
                     service.title + ` til pris: ` + service.price + `kroner.`
                   }
                 >

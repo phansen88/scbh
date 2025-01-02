@@ -148,7 +148,7 @@ const Footer = () => {
               <div className="mb-2.5 sm:mt-6">
                 <iframe
                   title="Google maps - Skincare by Hammer"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.6523002426575!2d12.18978517678413!3d55.660256273049995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525ec6219f9b55%3A0xf483ae699e6ee84c!2sBavne%C3%A5sen%2038%2C%202640%20Hedehusene!5e0!3m2!1sda!2sdk!4v1708463140032!5m2!1sda!2sdk"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11019.486547408338!2d12.190820320162375!3d55.66092785600759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46525f941b237e77%3A0x2ac72d368a89ff90!2sSkincare%20by%20Hammer!5e0!3m2!1sda!2sdk!4v1735830060864!5m2!1sda!2sdk"
                   width="600"
                   height="450"
                   allowFullScreen={false}
